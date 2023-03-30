@@ -564,20 +564,6 @@
 #define DUMMY_THERMISTOR_998_VALUE  25
 #define DUMMY_THERMISTOR_999_VALUE 100
 
-// Resistor values when using MAX31865 sensors (-5) on TEMP_SENSOR_0 / 1
-#if TEMP_SENSOR_IS_MAX_TC(0)
-  #define MAX31865_SENSOR_OHMS_0      100 // (Ω) Typically 100 or 1000 (PT100 or PT1000)
-  #define MAX31865_CALIBRATION_OHMS_0 430 // (Ω) Typically 430 for Adafruit PT100; 4300 for Adafruit PT1000
-#endif
-#if TEMP_SENSOR_IS_MAX_TC(1)
-  #define MAX31865_SENSOR_OHMS_1      100
-  #define MAX31865_CALIBRATION_OHMS_1 430
-#endif
-#if TEMP_SENSOR_IS_MAX_TC(2)
-  #define MAX31865_SENSOR_OHMS_2      100
-  #define MAX31865_CALIBRATION_OHMS_2 430
-#endif
-
 #if HAS_E_TEMP_SENSOR
   #define TEMP_RESIDENCY_TIME         10  // (seconds) Time to wait for hotend to "settle" in M109
   #define TEMP_WINDOW                  1  // (°C) Temperature proximity for the "temperature reached" timer
@@ -3132,13 +3118,13 @@
  *  - Plug the microSD card into the back of the display.
  *  - Boot the display and wait for the update to complete.
  */
-//#define DGUS_LCD_UI ORIGIN
-#if DGUS_UI_IS(MKS)
-  #define USE_MKS_GREEN_UI
-#elif DGUS_UI_IS(IA_CREALITY)
-  //#define LCD_SCREEN_ROTATE 90          // Portrait Mode or 800x480 displays
-  //#define IA_CREALITY_BOOT_DELAY 1500   // (ms)
-#endif
+// //#define DGUS_LCD_UI ORIGIN
+// #if DGUS_UI_IS(MKS)
+//   #define USE_MKS_GREEN_UI
+// #elif DGUS_UI_IS(IA_CREALITY)
+//   //#define LCD_SCREEN_ROTATE 90          // Portrait Mode or 800x480 displays
+//   //#define IA_CREALITY_BOOT_DELAY 1500   // (ms)
+// #endif
 
 //
 // Touch-screen LCD for Malyan M200/M300 printers
