@@ -486,7 +486,7 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 66
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -601,9 +601,9 @@
     #define DEFAULT_Kd_LIST {  68.33,  68.33 }
   #else
     // Creality 3DPrintMill U-shaped cooling duct and 100% fan tuned at 220c
-    #define DEFAULT_Kp  24.19
-    #define DEFAULT_Ki   2.14
-    #define DEFAULT_Kd  68.33
+    #define DEFAULT_Kp  39.24
+    #define DEFAULT_Ki   5.38
+    #define DEFAULT_Kd  71.52
   #endif
 #endif // PIDTEMP
 
@@ -932,7 +932,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1148.4, 137.65 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 305 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1345,7 +1345,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
