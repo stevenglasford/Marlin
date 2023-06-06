@@ -9,10 +9,6 @@ jobs:
     steps:
       - name: Checkout Latest
         uses: actions/checkout@v2
-      - uses: docker://sglahn/platformio-core:latest
-        with:
-          version: 6
-          args: run
 
       - name: Set up Python
         uses: actions/setup-python@v2
