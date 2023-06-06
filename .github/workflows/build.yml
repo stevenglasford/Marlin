@@ -8,12 +8,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Run PlatformIO
-        uses: platformio/platformio-action@v2
+      - uses: docker://sglahn/platformio-core:latest
         with:
           version: 6
-          command: |
-            run
+          args: run
 
       
           
