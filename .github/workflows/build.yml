@@ -7,14 +7,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Latest
+        uses: actions/checkout@v2
       - uses: docker://sglahn/platformio-core:latest
         with:
           version: 6
           args: run
 
-      
-          
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install PlatformIO
+        run: pip install -U platformio
+
+      - name: Run PlatformIO
+        run: platformio run
+
+      - name: Compile the firmware
+        run: platformio run --silent -e STM32F103RET6_creality ; echo "done" >|"/tmp/ipc"
+
       - name: Archive built firmware
         uses: actions/upload-artifact@v2
         with:
