@@ -8,9 +8,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: docker://sglahn/platformio-core:latest
+      - name: Run PlatformIO
+        uses: platformio/platformio-action@v2
         with:
-          args: run
+          version: 6
+          command: |
+            run
+
+      
           
       - name: Archive built firmware
         uses: actions/upload-artifact@v2
