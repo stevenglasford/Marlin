@@ -17,10 +17,7 @@ jobs:
 
       - name: Install PlatformIO
         run: pip install -U platformio
-
-      - name: Run PlatformIO
-        run: platformio run
-
+        
       - name: Compile the firmware
         run: platformio run --silent -e STM32F103RET6_creality ; echo "done" >|"/tmp/ipc"
 
