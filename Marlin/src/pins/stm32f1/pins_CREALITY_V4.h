@@ -71,19 +71,19 @@
 // Limit Switches
 //
 #define X_STOP_PIN                          PA5
-#define Y_STOP_PIN                          PA6
-#define Z_STOP_PIN                          PA7
+#define Y_STOP_PIN                          PA4 ///This was changed for putting a 4.2.7 board on CR30, it previously was PA6
+// #define Z_STOP_PIN                          PA7  //CR30 has no z stop
 
 #ifndef Z_MIN_PROBE_PIN
   #define Z_MIN_PROBE_PIN                   PB1   // BLTouch IN
 #endif
 
-//
-// Filament Runout Sensor
-//
-#ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN                    PA4   // "Pulled-high"
-#endif
+// //
+// // Filament Runout Sensor
+// //
+// #ifndef FIL_RUNOUT_PIN
+//   #define FIL_RUNOUT_PIN                    PA4   // "Pulled-high"
+// #endif
 
 //
 // Steppers

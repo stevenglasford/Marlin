@@ -26,11 +26,15 @@
  */
 
 #define BOARD_INFO_NAME      "Creality v4.2.7"
-#define DEFAULT_MACHINE_NAME "Creality3D"
+// #define DEFAULT_MACHINE_NAME "Creality3D"
+#ifndef DEFAULT_MACHINE_NAME
+  #define DEFAULT_MACHINE_NAME "3DPrintMill"
+#endif
 
 //
 // Steppers
 //
+ 
 #define X_STEP_PIN                          PB9
 #define X_DIR_PIN                           PC2
 #define Y_STEP_PIN                          PB7
